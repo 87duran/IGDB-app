@@ -108,7 +108,7 @@ ul {
         height: 32px;
         background-image: url('../imgs/search-12-32.png');
     }
-    .input_field {
+    #input_field {
         font-size: 22px;
         line-height:1.7;
     }

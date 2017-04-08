@@ -1,0 +1,33 @@
+<div ng-hide="pageContent">
+    <h1 class="game_title">{{game.name}}</h1>
+    <div class="underline"></div>
+    <div class="animated fadeInLeft column_container">
+        <div class="left_column">
+            <img class="margin-top" src="https://images.igdb.com/igdb/image/upload/t_cover_big/{{game.cover.cloudinary_id}}.jpg">
+        </div>
+        <div class="animated fadeInLeft right_column">
+            <h2>Release Date</h2>
+            <div class="underline"></div>
+            <p>{{releaseDate}}</p>
+            <h2>Summary</h2>
+            <div class="underline"></div>
+            <p>{{game.summary || game.storyline}}</p>
+            <h2>Developer</h2>
+            <div class="underline"></div>
+            <p>{{company}}</p>
+        </div>
+    </div>
+    <div class="animated fadeInLeft">
+        <h2>Screenshots</h2>
+        <div class="underline"></div>
+        <ul class="screenshots">
+            <li ng-repeat="img in game.screenshots" class="animated fadeInLeft screenshot" style="animation-delay:{{$index * 400}}ms">
+                <a href="https://images.igdb.com/igdb/image/upload/t_screenshot_big/{{img.cloudinary_id}}.jpg" target="_blank"><img src="https://images.igdb.com/igdb/image/upload/t_screenshot_med/{{img.cloudinary_id}}.jpg"></a>
+            </li>
+        </ul>
+    </div>
+    <div class="animated fadeInLeft">
+        <a href="{{game.url}}" target="_blank"><h3>See this game on IGDB</h3></a>
+    </div>
+</div>
+

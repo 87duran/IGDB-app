@@ -1,0 +1,132 @@
+/*
+====== Sitewide CSS =========
+*/
+
+body {
+    margin: 3% 4.5%;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+h1 {
+    font-size: 2em;
+    padding-top: 15px;
+    font-family: 'Muli', sans-serif;
+    color: #000;
+    margin-bottom: 5px;
+}
+h2 {
+    font-size: 1.4em;
+    font-family: 'Muli', sans-serif;
+    color: #000;
+    margin-bottom: 5px;
+}
+li {
+    list-style: none;
+}
+ul {
+    padding: 0;
+}
+.center {
+    text-align: center;
+}
+.margin-top {
+    margin-top: 25px;
+}
+
+/*
+====== Input Area =========
+*/
+
+#search_icon {
+    width: 16px;
+    height: 16px;
+    background-image: url('../imgs/search-12-16.png');
+    float: right;
+    cursor: pointer;
+}
+#input_field {
+    font-size: 15px;
+    border: 0;
+    outline: none;
+    text-align: center;
+    width: 85%;
+}
+.form {
+    margin: auto;
+    width: 50%;
+    height: 25px;
+    border-bottom: solid 2px black;
+    margin-bottom: 25px;
+}
+
+
+/*
+====== Results Page =========
+*/
+
+.single_result {
+    display: flex;
+    padding: 10px 0;
+    width: 100%;
+}
+.single_result img {
+    padding-right: 5px;
+}
+
+/*
+====== Single Result Page ======
+*/
+
+.underline {
+    border-bottom: #FF4848 solid 4px;
+    width: 5em;
+    height: 4px;
+}
+.screenshots {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+.screenshot {
+    flex: 0 0 48%;
+    padding: 1%
+}
+.screenshot img{
+    max-width: 570px;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/*
+====== Media Queries =========
+*/
+
+@media screen and (min-width: 767px) {
+    #search_icon {
+        width: 32px;
+        height: 32px;
+        background-image: url('../imgs/search-12-32.png');
+    }
+    .input_field {
+        font-size: 22px;
+        line-height:1.7;
+    }
+    .form {
+        height: 40px;
+    }
+}
+@media screen and (min-width: 1060px) {
+    .screenshot {
+        flex: 0 0 31%;
+    }
+    .column_container {
+        display: flex;
+    }
+    .left_column {
+        width: 30%;
+    }
+    .right_column {
+        width: 70%;
+    }
+}

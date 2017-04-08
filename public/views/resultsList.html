@@ -1,0 +1,11 @@
+<div ng-show="resultsList" ng-repeat="result in results" class="animated fadeInDown" style="animation-delay:{{$index * 300}}ms">
+        <div class="single_result">
+            <a href="/singleResult/{{$index}}"><img src="{{result.cover.url}}"></a>
+            <li><a href="/singleResult/{{$index}}">{{result.name}}</a></li>
+        </div>
+ </div>
+ <div ng-show="noResult">
+     {{notFound}}
+ </div>
+
+

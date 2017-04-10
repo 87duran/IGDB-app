@@ -50,7 +50,8 @@ ul {
     border: 0;
     outline: none;
     text-align: center;
-    width: 55%;
+    width: 85%;
+    padding: 0;
 }
 .form {
     margin: auto;

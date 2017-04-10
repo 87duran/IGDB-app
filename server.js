@@ -19,11 +19,11 @@ app.get('*', function(req, res) {
 
 app.post('/getgames', function(req, res) {
     if(req.body.searchTerm === undefined || "") {    //check for empty string and send back error to avoid empty API calls
-        console.log('Empty String received')
+        console.log('Empty String received');
         var errorResponse = "Not Found";
         res.send(errorResponse);
     } else {
-        unirest.get("https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name,summary,cover,popularity&limit=20&offset=0&order=popularity%3Adesc&search=" + req.body.searchTerm)
+        unirest.get("https://igdbcom-internet-game-database-v1.p.mashape.com/games/?fields=name,summary,cover&limit=20&offset=0&search=" + req.body.searchTerm)
             .header("X-Mashape-Key", "abcz9c7ij2mshok2Q3w1ANyBkuAtp1opZinjsnP66BIcy5ouPl")
             .header("Accept", "application/json")
             .end(function (result) {

@@ -6,7 +6,7 @@ app.controller('singleResultCtrl', function($scope, mainService, $location, $sta
     var getCompany = function(companyId) {    //function for getting company name of a single game
         mainService.getCompany(companyId)
             .then(function(res){
-                console.log(res)
+                console.log(res);
                 $scope.company = res.data[0].name;
             })
     };

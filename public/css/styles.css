@@ -130,4 +130,8 @@ ul {
     .right_column {
         width: 70%;
     }
+    .description {
+        max-width: 1100px;
+        margin: 3% auto;
+    }
 }
